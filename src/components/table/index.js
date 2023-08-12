@@ -1,0 +1,1 @@
+export const { default: TableCom } = require("./TableCom");

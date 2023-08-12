@@ -1,0 +1,1 @@
+export const { default: ImageCom } = require("./ImageCom");

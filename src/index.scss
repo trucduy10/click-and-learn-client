@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    @apply font-tw-primary text-base leading-normal mx-auto bg-tw-light;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1 {
+    @apply text-3xl md:text-4xl font-bold;
+    foo: bar;
+  }
+
+  button,
+  [type="button"] {
+    -webkit-appearance: button;
+    background-image: none;
+    color: black;
+    border-color: #d9d9d9;
+  }
+}
+
+@layer components {
+  .layout-home {
+    @apply max-w-[1440px] mx-auto;
+    foo: bar;
+  }
+  // ******** GENERAL CUSTOM CSS *********
+  .tw-transition-all {
+    @apply transition-all duration-300;
+    foo: bar;
+  }
+
+  .tw-bg-gradient-dark {
+    @apply bg-gradient-to-t from-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0.5)];
+    foo: bar;
+  }
+
+  // ***** Modal ******
+  .ReactModal__Body--open {
+    overflow: hidden !important;
+  }
+  .scroll-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scroll-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  // ***** END Modal ******
+  // ******** END GENERAL CUSTOM CSS *********
+
+  // ******** SIDE BAR ********
+  .sidebar {
+    @apply transition-all duration-300;
+    foo: bar;
+  }
+
+  .animate-slide-in {
+    transform: translateY(10%);
+  }
+
+  .custom-upload .ant-upload .ant-upload-select {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  // ******** END SIDE BAR ********
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cards .card-item:hover {
+    transform: scale(105%);
+  }
+
+  .cards:hover > .card-item:not(:hover) {
+    transform: scale(90%);
+  }
+
+  .loading-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    height: 96px;
+    width: 96px;
+    animation: rotate_3922 1.2s linear infinite;
+    background-color: #7366ff;
+    background-image: linear-gradient(#f62682, #7366ff, #0be8ab);
+  }
+
+  .loading-spin span {
+    position: absolute;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    background-color: #7366ff;
+    background-image: linear-gradient(#f62682, #7366ff, #0be8ab);
+  }
+
+  .loading-spin span:nth-of-type(1) {
+    filter: blur(5px);
+  }
+
+  .loading-spin span:nth-of-type(2) {
+    filter: blur(10px);
+  }
+
+  .loading-spin span:nth-of-type(3) {
+    filter: blur(25px);
+  }
+
+  .loading-spin span:nth-of-type(4) {
+    filter: blur(50px);
+  }
+
+  .loading-spin::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: solid 5px #ffffff;
+    background-color: rgb(252, 252, 252);
+    border-radius: 50%;
+  }
+
+  @keyframes rotate_3922 {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+}

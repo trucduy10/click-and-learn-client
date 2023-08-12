@@ -1,0 +1,30 @@
+{
+  "short_name": "Click and Learn",
+  "name": "Create Click and Learn Sample",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo_click_thumb_light.png",
+      "type": "image/png",
+      "sizes": "273x289" 
+    },
+    {
+      "src": "logo_click_light.png",
+      "type": "image/png",
+      "sizes": "500x227"
+    },
+    {
+      "src": "footer_download_android.png",
+      "type": "image/png",
+      "sizes": "273x289"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#f4f4f4",
+  "background_color": "#ffffff"
+}

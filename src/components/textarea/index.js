@@ -1,0 +1,1 @@
+export const { default: TextAreaCom } = require("./TextAreaCom");
